@@ -16,7 +16,7 @@ public class MushroomSpawn : MonoBehaviour
         this.GetComponent<Transform>().localScale = new Vector3(0.01f, 0.01f, 0.01f);
 
         GetComponent<SpriteRenderer>().enabled = false;
-        startTimer = Random.Range(0.1f, 1f);
+        startTimer = Random.Range(0.1f, 1.2f);
         spawnEffects[0].GetComponent<ParticleSystem>().GetComponent<Renderer>().sortingOrder = this.GetComponent<Renderer>().sortingOrder + 1;  // Front effect
         spawnEffects[1].GetComponent<ParticleSystem>().GetComponent<Renderer>().sortingOrder = this.GetComponent<Renderer>().sortingOrder - 1;  // Back effect
     }
@@ -61,7 +61,7 @@ public class MushroomSpawn : MonoBehaviour
 
 
         // Make the mushroom grow up
-        heightSequence.AppendInterval(.4f);
+        heightSequence.AppendInterval(.7f);
         heightSequence.Append(this.GetComponent<Transform>().DOScale(finalScale / 100, .1f));
 
         heightSequence.Append(this.GetComponent<Transform>().DOScale(finalScale / 4, .2f));

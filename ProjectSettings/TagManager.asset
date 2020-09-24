@@ -43,6 +43,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: HexTiles
+    uniqueID: 517789651
+    locked: 0
+  - name: Roots
+    uniqueID: 1400168367
+    locked: 0
   - name: MushroomSprites
     uniqueID: 3611211091
     locked: 0
