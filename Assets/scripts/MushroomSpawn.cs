@@ -61,6 +61,7 @@ public class MushroomSpawn : MonoBehaviour
 
 
         // Make the mushroom grow up
+        heightSequence.AppendInterval(.4f);
         heightSequence.Append(this.GetComponent<Transform>().DOScale(finalScale / 100, .1f));
 
         heightSequence.Append(this.GetComponent<Transform>().DOScale(finalScale / 4, .2f));
