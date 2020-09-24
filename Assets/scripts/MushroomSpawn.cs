@@ -48,8 +48,8 @@ public class MushroomSpawn : MonoBehaviour
 
         Sequence verticalMove = DOTween.Sequence();
 
-        verticalMove.Append(this.GetComponent<Transform>().DOLocalMoveY(transform.localPosition.y - 1f, 0.01f));
-        verticalMove.Append(this.GetComponent<Transform>().DOLocalMoveY(transform.localPosition.y + .5f, 2.2f));
+        //verticalMove.Append(this.GetComponent<Transform>().DOLocalMoveY(transform.localPosition.y - 1f, 0.01f));
+        verticalMove.Append(this.GetComponent<Transform>().DOLocalMoveY(transform.localPosition.y + .25f, 2.7f));
 
         Sequence widthSequence = DOTween.Sequence();
         Sequence heightSequence = DOTween.Sequence();
@@ -63,13 +63,13 @@ public class MushroomSpawn : MonoBehaviour
         // Make the mushroom grow up
         heightSequence.Append(this.GetComponent<Transform>().DOScale(finalScale / 100, .1f));
 
-        heightSequence.Append(this.GetComponent<Transform>().DOScale(finalScale / 4, .3f));
+        heightSequence.Append(this.GetComponent<Transform>().DOScale(finalScale / 4, .2f));
 
         heightSequence.Append(this.GetComponent<Transform>().DOScale(finalScale * Random.Range(1.2f, 1.4f), .6f));
-        heightSequence.Append(this.GetComponent<Transform>().DOScale(finalScale / 3, .4f));
+        heightSequence.Append(this.GetComponent<Transform>().DOScale(finalScale / 1.5f, .4f));
         //heightSequence.Append(this.GetComponent<Transform>().DOScale(finalScale / 4, .4f));
 
-        heightSequence.Append(this.GetComponent<Transform>().DOScale(finalScale, .5f));
+        heightSequence.Append(this.GetComponent<Transform>().DOScale(finalScale, .35f));
 
         // Grow in a pulse-like manner, always heading towards the target scale
         float shrinkTime = Random.Range(.10f, .20f);
